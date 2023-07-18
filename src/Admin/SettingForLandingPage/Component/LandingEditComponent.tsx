@@ -39,7 +39,7 @@ try {
   setcomponentTypeSpecificId(data.result.component.componentTypeSpecificId)
   setDescription(data.result.component.description)
   Setheight(data.result.component.height)
-  setComponentDetails(data.result.component.componentDetails)
+  setComponentDetails(data.result.component)
 }
 } catch (error) {
   
@@ -218,7 +218,7 @@ try {
               <div className="form-group m-auto label textOnInput col-lg-12 rounded border  border-dark ">
                 <label >اجزا</label>
 
-               <LandingSetComponentDetails componentDetails={ComponentDetails} GetComponent={getcomponent} componentId={params.id}/>
+               <LandingSetComponentDetails componentDetails={ComponentDetails}  GetComponent={getcomponent} componentId={params.id}/>
 
               </div>
             </div>
