@@ -119,9 +119,11 @@ const LandingSetComponentDetails = ({ componentDetails, GetComponent, componentI
     }
   }
 
+
+
   return (
     <div className=" rounded ProductSupplyCondition ">
-      {componentDetails.length < 1 ? (<span className="d-block text-center p-5 ">هیچ اجزایی یافت نشد</span>) : (
+      {componentDetails.componentDetails.length < 1 ? (<span className="d-block text-center p-5 ">هیچ اجزایی یافت نشد</span>) : (
         <div className=" ProductSupplyCondition-table table  table-hover table-striped  p-2">
           <table
             className="  mt-2  mb-4">
@@ -137,7 +139,7 @@ const LandingSetComponentDetails = ({ componentDetails, GetComponent, componentI
               </tr>
             </thead>
             <tbody>
-              {componentDetails.length > 0 ? componentDetails.map((i, index) => (
+              {componentDetails.componentDetails.length > 0 ? componentDetails.componentDetails.map((i, index) => (
 
 
                 <tr key={i.id}>
