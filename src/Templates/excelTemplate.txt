@@ -1,0 +1,38 @@
+
+ const urlForExcel = () => {
+
+        let parameter = {
+            RoleIds: params.userRole ? params.userRole.map((item:any) => item.value) : [],
+            UserName: params.UserName,
+            FirstName: params.FirstName,
+            LastName: params.LastName,
+            NationalCode: params.NationalCode,
+            PageNumber: 0,
+            PageSize:100000,companyId
+
+
+        }
+
+
+
+        let url = QueryString.stringify(parameter)
+
+
+        return (`?${url}`)
+
+
+
+    }
+
+
+
+
+    -----------------------------------------------------------------------
+
+
+
+   <ExportToExcelProVersion url={`Organization/GetOrganizations/${urlForExcel()}`} fileName='لیست سازمان ها' />
+
+
+
+--------------------------------------------------------------------------------

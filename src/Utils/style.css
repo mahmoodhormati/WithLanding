@@ -1,0 +1,308 @@
+.containBox{
+    margin: 0 auto;
+        /*margin-left: 2.5%;*/
+        /*margin-right: 2.5%;*/
+        width: 95%;
+       height: auto;
+    
+        
+    }
+    
+    .coloredBox{
+    font-size: small;
+    max-height: 30px;
+    text-align: center;
+    border: 1px solid black;
+    background-color: lightgray;
+    vertical-align: super;
+    
+    }
+    
+    .EmptycoloredBox{
+        text-align: center;
+        border: 1px solid black;
+        background-color: lightgray;
+        vertical-align: super;
+        height: 30px;
+        
+    
+    }
+    .containBox .table td {
+        border-bottom:1px solid black;
+        border-left:1px solid black;
+        border-right:1px solid black;
+    
+    }
+    .a4 {
+        padding: 0;
+        background: transparent;
+        transform-origin: top center;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    
+    * {
+        box-sizing: border-box;
+    }
+    
+    .page {
+        font-size: 14px;
+        font-weight: 200;
+        height: 100%;
+        width: 29.7cm;
+        max-width: 70vw;
+        margin: 1cm 0;
+        background: white;
+        box-shadow: 0 4px 5px rgba(75, 75, 75, 0.2);
+        border: 1px #d3d3d3 solid;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+    }
+    .pageClient {
+        font-size: 14px;
+        font-weight: 200;
+        height: 100%;
+        width: 29.7cm;
+        max-width: 70vw;
+        margin: 1cm 0;
+        background: white;
+        box-shadow: 0 4px 5px rgba(75, 75, 75, 0.2);
+        border: 1px #d3d3d3 solid;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+    }
+    @media (min-width: 1200px) {
+    .Pagination{
+        font-size: x-small;
+        padding: .5rem;
+    }
+    }
+    @media (max-width: 600px) {
+        .multi-stepss > li:before {
+            content: "";
+            content: "✓;";
+            content: "𐀃";
+            content: "𐀄";
+            content: "✓";
+            display: inline;
+            margin: 0 auto 16px;
+             background-color: transparent!important;
+             width: 12px!important;
+             height: 12px!important;
+            line-height: 17px!important;
+            text-align: center;
+            font-weight: bold;
+             border-width: 0px!important;
+            border-style: solid;
+            border-color: transparent!important;
+             border-radius: 50%;
+             color: inherit!important;
+            float: right!important;
+        }
+        .Pagination {
+            font-size: 8px;
+            padding: 0;
+        }
+        .progress-bars__bars {
+            background-color: #e1e1e1;
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            right: -11%!important;
+            top: 0;
+            transition: all 500ms ease-out!important;
+            width: 4px;
+            z-index: -1;
+        }
+        .progress-bars {
+            /* background-color: #e1e1e1; */
+             height: 100%!important;
+            /* overflow: hidden; */
+            position: absolute!important;
+             right: 49%;
+            bottom: calc(50% + -41px)!important;
+            /* bottom: calc(50% + 7px); */
+             width: 4px!important;
+             z-index: -1;
+        }
+        .multi-stepss{
+           display: inline-grid!important;
+            margin: 0!important;
+            padding: 0!important;
+        }
+        br{
+            display: none;
+        }
+    }
+    .info-border {
+        border-left: 1px solid black;
+        border-right: 1px solid black;
+    }
+
+.multi-stepss > li.is-active ~ li:before, .multi-steps > li.is-active:before {
+    content: counter(stepNum);
+    font-family: inherit;
+    font-weight: 700;
+}
+.multi-stepss-cancel > li.is-active ~ li:before, .multi-steps > li.is-active:before {
+    content: counter(stepNum);
+    font-family: inherit;
+    font-weight: 700;
+}
+.multi-stepss > li.is-active ~ li:after, .multi-stepss > li.is-active:after {
+    background-color: #e1e1e1;
+}
+.multi-stepss-cancel > li.is-active ~ li:after, .multi-stepss > li.is-active:after {
+    background-color: #e1e1e1;
+}
+
+.multi-stepss {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+.multi-stepss-cancel {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+.multi-stepss > li {
+    counter-increment: stepNum;
+    text-align: center;
+    display: table-cell;
+    position: relative;
+    color: #027f00;
+}
+.multi-stepss-cancel > li {
+    counter-increment: stepNum;
+    text-align: center;
+    display: table-cell;
+    position: relative;
+    color: #ff0014;
+}
+.multi-stepss > li:before {
+    content: "";
+    content: "✓;";
+    content: "𐀃";
+    content: "𐀄";
+    content: "✓";
+    display: block;
+    margin: 0 auto 4px;
+    background-color: #027f00;
+    width: 36px;
+    height: 36px;
+    line-height: 32px;
+    text-align: center;
+    font-weight: bold;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #027f00;
+    border-radius: 50%;
+    color: white;
+}
+.multi-stepss-cancel > li:before {
+
+    content: "\2715";
+    display: block;
+    margin: 0 auto 4px;
+    background-color: #ff0000;
+    width: 36px;
+    height: 36px;
+    line-height: 32px;
+    text-align: center;
+    font-weight: bold;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #ff0000;
+    border-radius: 50%;
+    color: white;
+}
+.multi-stepss > li:last-child:after {
+    display: none;
+}
+.multi-stepss > li.is-active:before {
+    background-color: #fff;
+    border-color: #027f00;
+    color: #027f00;
+    animation: pulse 2s infinite;
+}
+.multi-stepss > li.is-active ~ li {
+    color: #808080;
+}
+.multi-stepss > li.is-active ~ li:before {
+    background-color: #e1e1e1;
+    border-color: #e1e1e1;
+    color: #808080;
+}
+
+.is-complete {
+    background: linear-gradient(to right, #027f00 50%, #e1e1e1 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all 0.5s ease-out;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 #027f0070;
+    }
+    100% {
+        box-shadow: 0 0 0 10px #027f0000;
+    }
+}
+@keyframes pulsered {
+    0% {
+        box-shadow: 0 0 0 0 rgba(127, 0, 11, 0.44);
+    }
+    100% {
+        box-shadow: 0 0 0 10px #027f0000;
+    }
+}
+@keyframes nextStep {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+.progress-bars {
+    cursor: pointer;
+    user-select: none;
+}
+
+.progress-bars {
+    background-color: #e1e1e1;
+    height: 7px;
+    overflow: hidden;
+    position: absolute;
+    right: 67%;
+    bottom: calc(50% + 7px);
+    width: 67%;
+
+}
+
+.progress-bars--success {
+    background-color: #027f00;
+}
+.progress-bars--Cancellation {
+    background-color: #ff0000;
+}
+
+.progress-bars__bars {
+    background-color: #e1e1e1;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: all 500ms ease-out;
+}

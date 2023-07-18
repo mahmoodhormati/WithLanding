@@ -1,0 +1,75 @@
+.small a{
+font-size: 12px;
+}.small span{
+font-size: 12px;
+}.small p{
+font-size: 12px;
+}
+
+.small h1{
+font-size: 35px;
+}.small h2{
+font-size: 30px;
+}.small h3{
+font-size: 25px;
+}.small h4{
+font-size: 20px;
+}.small h5{
+font-size: 15px;
+}.small h6{
+font-size: 12px;
+}
+/*medium*/
+
+.medium p{
+font-size: 15px;
+}.medium a{
+font-size: 15px;
+}.medium span{
+font-size: 15px;
+}
+.medium h1{
+font-size: 40px;
+}
+.medium h2{
+font-size: 35px;
+}
+.medium h3{
+font-size: 30px;
+}
+.medium h4{
+font-size: 25px;
+}
+.medium h5{
+font-size: 20px;
+}
+.medium h6{
+font-size: 15px;
+}
+
+/*large*/
+.large p{
+    font-size: 20px;
+}.large a{
+     font-size: 20px;
+ }.large span{
+      font-size: 20px;
+  }
+.large h1{
+    font-size: 50px;
+}
+.large h2{
+    font-size: 45px;
+}
+.large h3{
+    font-size: 40px;
+}
+.large h4{
+    font-size: 35px;
+}
+.large h5{
+    font-size: 30px;
+}
+.large h6{
+    font-size: 20px;
+}

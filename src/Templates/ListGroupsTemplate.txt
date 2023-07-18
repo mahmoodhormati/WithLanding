@@ -1,0 +1,94 @@
+// const [userCompanies, setUserCompanies] = useState([])
+// let [companyId, SetcompanyId] = useState()
+// const [productG, setProductG] = useState([]);
+
+ ///getGroups
+ 
+//  const GetProductGroup = async (companyId) => {
+//         if (userCompanies.length === 1) {
+//             try {
+
+//                 const { data, status } = await GetGroupWithCompany(2, userCompanies[0].id);
+//                 setProductG(data.result.groups)
+
+//             } catch (error) {
+
+//             }
+
+//         }
+//         else {
+//             try {
+//                 const { data, status } = await GetGroupWithCompany(2, companyId);
+//                 setProductG(data.result.groups)
+
+//             } catch (error) {
+
+//             }
+
+//         }
+
+
+//     }
+
+
+
+
+//     /////select 
+
+
+//     {userCompanies.length > 1 ?
+//         <AdvancedSearch>
+//             <form className='form-row textOnInput'>
+
+//                 <div className="col-lg-4 col-md-4 col-sm-4   selectIndex">
+//                     <label> شرکت</label>
+//                     <Select
+//                         defaultValue={defaultValue}
+//                         placeholder='نام شرکت'
+//                         options={companys()}
+//                         key={defaultValue}
+//                         isClearable={true}
+//                         onChange={e => {
+
+
+//                             SetcompanyId(e.value)
+
+
+//                         }
+
+//                         }
+
+//                     />
+//                 </div>
+
+
+//             </form>
+
+//         </AdvancedSearch> : ''}
+
+
+// /////companyChild
+
+// 
+//const GetCurrentUserCompany = async () => {
+
+//     try {
+//         const { data, status } = await GetCompanyChild()
+//         if (status === 200) {
+//             setUserCompanies(data.result.companies)
+//             SetcompanyId(data.result.companies[0].id)
+//         }
+//     } catch (error) {
+//         console.log();
+//     }
+// }
+
+// ////useeffects
+// useEffect(()=>{
+//     GetCurrentUserCompany();
+// },[])
+
+
+// useEffect(()=>{
+//     GetProductGroup(companyId);
+// },[companyId])

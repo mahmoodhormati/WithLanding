@@ -1,0 +1,35 @@
+aria-label={headerGroups.map(headerGroup => (headerGroup.headers.map((column)=>column.Header)).filter((item,i)=>i>0 && i===index).map((item,i)=>(item))[0])}
+
+
+
+@media screen and (max-width: 600px) {  
+  .responsive thead {
+    visibility: hidden;
+    height: 0;
+    position: absolute;
+  }
+  
+  .responsive tr {
+    display: block;
+    margin-bottom: .625em;
+  }
+  
+  .responsive td {
+    border: 1px solid;
+    border-bottom: none;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+  }
+  
+  .responsive td::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .responsive td:last-child {
+    border-bottom: 1px solid;
+  }
+}

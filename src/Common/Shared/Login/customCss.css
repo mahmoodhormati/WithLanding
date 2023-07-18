@@ -1,0 +1,29 @@
+.auth {
+    height: auto;
+    width: 938px;
+    margin: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.box {
+    
+        display: flex;
+        justify-content: center;
+    margin: 20px;
+   
+}
+.input{
+	margin: 5px;
+	height: 35px;
+	width: 55px;
+	border: none;
+	border-radius: 5px;
+	text-align: center;
+	font-family: arimo;
+	font-size: 1.2rem;
+	background: #feffff;
+    box-shadow: 0px 0px 5px 0px;
+}

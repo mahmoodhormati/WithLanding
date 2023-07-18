@@ -1,0 +1,57 @@
+
+
+
+ const observer: any = useRef()
+
+----------------------------------------------
+  useEffect(() => {
+    GetPayment();
+  }, [PageSize]);
+
+--------------------------------------------------------------------2nd
+
+ const hasMore = () => {
+
+   
+    
+    if (PageSize < totalCount) {
+      return true
+    }
+    else {
+      return false
+    }
+
+  }
+
+  --------------------------------------------------------------------3rd
+
+
+   const lastDataRef = useCallback((node: any) => {
+
+
+
+    if (observer.current) {
+      observer.current.disconnect()
+    }
+    observer.current = new IntersectionObserver((enteris: any) => {
+
+      if (enteris[0].isIntersecting && hasMore() ) {
+
+        console.log();
+        
+
+
+        setPageSize((prev:any)=>prev+5)
+
+        console.log(PageSize);
+
+      }
+    })
+    if (node) {
+      observer.current.observe(node)
+    }
+
+  }, [hasMore()])
+-----------------------------------------------------------------------------
+
+setret OnData Return

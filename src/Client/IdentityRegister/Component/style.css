@@ -1,0 +1,19 @@
+.user-progress {
+    background-color: #fff;
+    width: 100%;
+    box-shadow: 0 4px 8px 0rgba(19,37,71,.1);
+    border-radius: 5px;
+    min-height: 600px;
+    margin: auto;
+   
+}
+.boxrow {
+  display: flex;
+  flex-direction: row;
+  margin-top: 2%;
+  box-shadow: 0 0 0 black;
+}
+.boxrow :hover {
+ border: blue; 
+ cursor: pointer;
+}

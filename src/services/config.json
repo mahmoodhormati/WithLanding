@@ -1,0 +1,8 @@
+{
+    "ForoshApi": "http://pirates.afraholding.com/api/v1",
+    "attachments": "http://pirates.afraholding.com/",
+    "localapi": "http://localhost:4000",
+    "MyApi":"https://localhost:5001/api",
+    "FromOutSide":"http://178.252.184.206:8091/api/v1"
+}
+

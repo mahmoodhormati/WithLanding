@@ -1,0 +1,55 @@
+
+
+
+.ChildContainer{
+
+    position: relative;
+    background-color: antiquewhite;
+    width: 100%;
+    
+   
+}
+
+
+.number1Child{
+    
+    height: 100%;
+   
+width: 100%;
+    margin: 1%;
+}
+
+.number1Childdiv{
+    
+    height: 100%;
+    margin: 1%;
+   
+width: 100%;
+    
+}
+.number1Childdiv > div {
+    
+    height: inherit;
+width: 30%;
+  
+}
+.number2Child{
+    
+  
+    width: 100%;
+    margin: 1%;
+}
+
+.number2Child  > div{
+
+    height: 100%;
+margin: 1%;
+    width: auto;
+}
+
+.childOfChildFive >div{
+    height: 100%;
+    width: 100%;
+    margin: 1%;
+
+}

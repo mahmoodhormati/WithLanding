@@ -1,0 +1,13 @@
+
+
+
+input[type="file"] {
+    display: none;
+}
+
+
+.image-hover:hover{
+    transform: scale(2);
+    position: relative;
+    z-index: 15;
+}

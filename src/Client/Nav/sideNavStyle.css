@@ -1,0 +1,149 @@
+.client-sideBar{
+position: absolute;
+    height: auto;
+    /* max-height: 80vh; */
+    /* min-height: 70vh; */
+    margin:0 auto;
+    box-shadow: none;
+    min-width: 100%!important;
+    /* padding: 10px; */
+    border: none!important;
+
+}
+.clientBody .ps-sidebar-root{
+    width: fit-content!important;
+}
+.css-1k88rtw{
+    position: sticky;
+}
+.client-sideBar> .css-dip3t8{
+    height:auto;
+    /* max-height: 80vh; */
+    box-shadow: none;
+    border-radius: 20px;
+    background-color: #ffffff;
+    box-shadow: none;
+
+    border-radius:20px;
+    min-height: 70vh;
+    margin: auto;
+    background: #FFFFFF!important;
+
+}
+.client-sideBar span{
+    font-size: 14px;
+    font-weight: 600;
+    margin-right: 10px;
+    color: rgb(67, 72, 77);
+}
+.client-sideBar span svg{
+   width: 1.7rem;
+   height: 1.7rem;
+}
+.client-sideBar svg{
+    width: fit-content!important;
+    color: rgb(88 158 244);
+}
+.client-sideBar svg path{
+   stroke: currentColor;
+}
+
+.client-sideBar .ps-menu-label{
+    text-align: right;
+}
+.client-sideBar .info-client h5{
+    font-size: 20px;
+    font-weight: 700;
+    color: rgb(47, 51, 54);
+
+}
+.edit-svg{
+    color: white;
+    background: rgb(88 158 244);
+    position: absolute;
+    display: inline;
+    right: 55%;
+    top: 37px;
+    width: 70px!important;
+    padding: 1px;
+    border-radius: 50%;
+}
+.client-sideBar .info-client h6{
+    font-size: 15px;
+    font-weight: 700;
+    color: rgb(108, 111, 112);
+
+}
+.client-sideBar .css-vj11vy .ps-menuitem-root > .ps-menu-button {
+    margin-left:  1rem;
+    margin-right:  1rem;
+    font-size: medium;
+    font-weight: 500;
+    /* border-bottom: 1px solid rgba(211, 211, 211, 0.473); */
+padding: 23px;
+}
+
+.client-sideBar .css-vj11vy .ps-menuitem-root:hover  {
+    background-color: rgb(88 158 244);
+    color: initial;
+
+}
+.client-sideBar .css-vj11vy .ps-menuitem-root:hover svg  {
+    color: white;
+
+}
+.client-sideBar .css-vj11vy .ps-menuitem-root:hover span  {
+    color: white;
+    border-radius: 10px;
+
+}
+.client-sideBar .css-vj11vy .bg-light-success:hover svg  {
+    color: white!important;
+
+}
+.client-sideBar .css-vj11vy .bg-light-danger:hover svg   {
+    color: white!important;
+
+}
+.client-sideBar .css-vj11vy .bg-light-success > .ps-menu-button:hover  {
+    background-color: transparent!important;
+}
+.client-sideBar .css-vj11vy .bg-light-success:hover  {
+    background-color: green!important;
+}
+.client-sideBar .css-vj11vy .bg-light-danger:hover  {
+    background-color:red!important;
+}
+.client-sideBar .css-vj11vy a:hover {
+    color: initial;
+    }
+    .client-sideBar .css-vj11vy a {
+        color: initial;
+        }
+.client-sideBar .css-1bdadyq:hover {
+    background: initial;
+}
+
+
+@media only screen and  (max-width: 600px) {
+    .client-sideBar {
+        width: 100%;
+        min-width: 100%!important;
+        min-height: 50vh;
+        margin-bottom: 1rem;
+        background-color: transparent!important;
+    }
+    .client-sideBar svg{
+        width: auto!important;
+        color: rgb(88 158 244);
+    }
+
+    .client-sideBar> .css-dip3t8 {
+        
+        margin: auto;
+        width: 100%;
+    }
+    .client-sideBar .css-vj11vy {
+        height: auto;
+    }
+}

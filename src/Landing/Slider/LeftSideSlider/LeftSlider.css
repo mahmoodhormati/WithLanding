@@ -1,0 +1,152 @@
+.sliderLeft {
+
+    position: relative;
+    
+    width: 100%;
+    display: flex;
+    
+height: 100%;
+    justify-content: end;
+
+}
+
+.afterSlider{
+
+    width: 50vw;
+    height: 100%;
+
+
+    background-color: rgba(255, 255, 255, 0.493);
+
+}
+
+
+
+.afterSlider >div{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+   
+    color: #000000!important;
+}
+.afterSlider  h3{
+    color: #000000!important;
+}
+
+.image{
+    width: 50vw;
+    height:100%;
+    
+}
+
+
+.right-arrow{
+    position: absolute;
+    top:50% ;
+    right: 52%;
+    font-size: 3rem;
+    color: white;
+    z-index: 10;
+    cursor: pointer;
+    user-select: none;
+}
+.left-arrow{
+    position: absolute;
+    top:50% ;
+    left: 2%;
+    font-size: 3rem;
+    color: white;
+    z-index: 10;
+    cursor: pointer;
+    user-select: none;
+}
+
+.slide{
+    opacity: 0;
+    transition-duration: 2s cubic-bezier(0,0,1,1);
+ 
+}
+
+.slide.active{
+    opacity: 1;
+    transition-duration: 1s cubic-bezier(0,0,1,1);
+    transform:scale(1) ;
+}
+
+.slider_control-LeftBanner {
+    z-index: 100;
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    margin-top: -25px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    transform: translateX(-50px);
+    opacity: 1;
+    transition: all 0.5s 1s;
+    cursor: pointer;
+  }
+  .slider_control-LeftBanner:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    margin-left: -10px;
+    margin-top: -10px;
+    border: 2px solid #000;
+    border-bottom: none;
+    border-right: none;
+    transform: translateX(5px) rotate(-45deg);
+  }
+  .slider_control--right-LeftBanner {
+    z-index: 100;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    margin-top: -25px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    transform: translateX(-50px);
+    opacity: 1;
+    transition: all 0.5s 1s;
+    cursor: pointer;
+  }
+  .slider_control--right-LeftBanner:before {
+    content: "";
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    margin-left: -10px;
+    margin-top: -10px;
+    border: 2px solid #000;
+    border-bottom: none;
+    border-right: none;
+    transform: translateX(5px) rotate(135deg);
+  }
+
+
+
+  
+  @media (max-width: 991px) {
+    .slider_control--right-LeftBanner { 
+     display: none;
+     
+    }
+
+
+    .slider_control-LeftBanner { 
+        display: none;
+        
+       }
+}

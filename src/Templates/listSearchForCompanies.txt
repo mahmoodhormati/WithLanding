@@ -1,0 +1,59 @@
+state****
+------------------------------------------------------------
+    const [companies, setCompanies] = useState([])
+    const [companyId, setCompanyId] = useState(getDefault().companyId ? getDefault().companyId : null)
+
+
+-------------------------------------------------------------
+
+
+const getCompanies = async () => {
+        try {
+            const { data, status } = await GetCompanyChild()
+            setCompanies(data.result.companies)
+      
+
+
+        } catch (error) {
+
+        }
+
+    }
+------------------------------------------------
+    useEffect(() => {
+        getCompanies()
+    }, [])
+-------------------------------------------------
+  const CompaniesIDs = () => {
+            return (companies.map(data => ({ label: data.name, value: data.id })))
+        }
+
+
+-----------------------------------------------    
+
+
+                 {companies.length > 1 ? <div className="col-lg-2 col-md-4  col-sm-12    textOnInput form-group "
+                            style={{ marginBottom: "3rem" }}>
+                            <div className=" form-control-sm">
+                                <label> نام شرکت </label>
+
+                                {companyId && companyId === null ?
+                                    <Select
+
+                                        options={CompaniesIDs()}
+                                        onChange={e => {
+                                            setCompanyId(e.value)
+                                        }}
+                                    /> : <Select
+                                        value={CompaniesIDs().filter(i => i.value === companyId).map(i => i)}
+
+                                        placeholder='نام شرکت'
+                                        options={CompaniesIDs()}
+                                        onChange={e => {
+                                            setCompanyId(e.value)
+                                            console.log(e);
+
+                                        }}
+                                    />}
+                            </div>
+                        </div> : ''}

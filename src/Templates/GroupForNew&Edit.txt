@@ -1,0 +1,63 @@
+state****
+------------------------------------------------------------
+let [companyId, SetcompanyId] = useState()
+let [companyName, SetCompanyName] = useState()
+    const [userCompanies, setUserCompanies] = useState([])
+
+
+-------------------------------------------------------------
+
+
+const getCompanies = async () => {
+        try {
+            const { data, status } = await GetCompanyChild()
+            setUserCompanies(data.result.companies)
+            SetcompanyId(data.result.companies[0].id)
+            SetCompanyName(data.result.companies[0].name)
+
+
+        } catch (error) {
+
+        }
+
+    }
+------------------------------------------------
+    useEffect(() => {
+        getCompanies()
+    }, [])
+-------------------------------------------------
+ const companys = () => {
+        return (userCompanies.map((item) => ({ label: item.name, value: item.id })))
+
+    }
+    let defaultValue = companys()[0]
+
+
+-----------------------------------------------    
+
+
+     {userCompanies?
+                            <div className="form-group mb-3 mt-3 textOnInput">
+
+                                <label> شرکت</label>
+                                <Select
+                                    defaultValue={defaultValue}
+                                    placeholder='نام شرکت'
+                                    options={companys()}
+                                    key={defaultValue}
+                                    isClearable={true}
+                                    onChange={e => {
+
+
+                                        SetcompanyId(e.value)
+                                        SetCompanyName(e.label)
+
+
+                                    }
+
+                                    }
+
+                                />
+
+
+                            </div>:''}

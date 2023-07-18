@@ -1,0 +1,38 @@
+.project {
+	margin: 0;
+	display: inline-block;
+	position: relative;
+	width: 1rem;
+	height: 2rem;
+	background-color: #bbb;
+	overflow: hidden;
+	.badge {
+		&.blue {
+			background: darkblue;
+		}
+		&.red {
+			background: darkred;
+		}
+		&.green {
+			background: transparent;
+		}
+		&.diagonal {
+			white-space: nowrap;
+			position: absolute;
+			
+			width: 2rem;
+			transform: rotate(90deg) translate(-50%, -50%) ;
+			color: white;
+			text-align: center;
+			
+			font-size: 12px;
+		
+			box-sizing: border-box;
+		}
+	}
+}
+
+
+.global-filter{
+	display:'inline-flex';float:'left'; margin:'10px'
+}
