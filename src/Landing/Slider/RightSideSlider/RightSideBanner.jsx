@@ -66,7 +66,7 @@ const RightSideBanner = ({ slides, time, height, data }) => {
     useEffect(() => {
         setTimeout(() => {
             GetSlideAttachments()
-          }, 3000);
+          }, 5000);
         const play = () => {
             autoPlayRef.current()
         }

@@ -70,7 +70,7 @@ const LeftSideBanner = ({ slides, time, height, data }) => {
 
         setTimeout(() => {
             GetSlideAttachments()
-          }, 3000);
+          }, 5000);
         const play = () => {
             autoPlayRef.current()
         }
