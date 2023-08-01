@@ -1,4 +1,5 @@
 import http from "./httpService";
+import httpWithoutToken from './httpServiceWithoutToken'
 
 let configure=window.globalThis.site_url;
 
@@ -32,4 +33,11 @@ export const DeleteAttachments=(deleteid)=>{
     }
 
     return http.delete(`${configure}/Attachment/DeleteAttachments`,config)
+}
+
+export const GetAttachmentsWithoutoken=(searchParams)=>{
+
+
+
+    return httpWithoutToken.get(`${configure}/home/GetAttachments`,searchParams)
 }

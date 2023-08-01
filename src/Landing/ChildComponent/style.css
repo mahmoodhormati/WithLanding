@@ -1,55 +1,48 @@
 
+.defaultHeight2Col{
+height: 50%;
 
-
-.ChildContainer{
-
-    position: relative;
-    background-color: antiquewhite;
-    width: 100%;
-    
-   
 }
 
 
-.number1Child{
-    
+.defaultHeight1Col{
     height: 100%;
-   
-width: 100%;
-    margin: 1%;
+
+    }
+    
+
+    .defaultHeight3Col{
+        height: 25%;
+        background: linear-gradient(90deg, rgba(195,195,195,1) 0%, rgba(85,84,81,1) 51%);
+        }
+
+.defaultBakground{
+    background: linear-gradient(90deg, rgba(195,195,195,1) 0%, rgba(85,84,81,1) 51%);
+    border-radius: .5rem;
+    
 }
 
-.number1Childdiv{
+.defaultBakground::after{
+    background: linear-gradient(to left, rgba(255,255,255,0) 0%,rgba(255,255,255,0.8) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100%);
+    animation: slide 2.5  ;
+    content:'';
+    top:0;
+      
+      height: 100%;
+      width: 50%;
+      position: absolute;
+      z-index:1;
     
-    height: 100%;
-    margin: 1%;
-   
-width: 100%;
-    
-}
-.number1Childdiv > div {
-    
-    height: inherit;
-width: 30%;
-  
-}
-.number2Child{
-    
-  
-    width: 100%;
-    margin: 1%;
 }
 
-.number2Child  > div{
-
-    height: 100%;
-margin: 1%;
-    width: auto;
+.radiusss{
+    border-radius: .5rem;
 }
 
-.childOfChildFive >div{
-    height: 100%;
-    width: 100%;
-    margin: 1%;
+@keyframes slide {
+	
+}
+
+.componentClass{
 
 }

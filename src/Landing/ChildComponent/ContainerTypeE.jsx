@@ -1,28 +1,40 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import './style.css'
-const ContainerTypeE = ({height}) => {
-  return (
-    <div className='d-flex flex-row justify-content-around ChildContainer' style={{height:`${height}`}}>
- <div className='d-flex col-3 flex-column number2Child'>
+const ContainerTypeE = ({ height,data }) => {
+  const [loading, setLoading] = useState(true)
 
-<div className='bg-info'>
 
-</div>
-</div>
+    return (
+      <div id={`CMP${data.id}`}  className='  rounded mt-4 mb-4' style={{ height: `${height}vh` ,minHeight:'45vh'}}>
+      <div className='row col-12 '>
+          <h3 className='col-12'>{data.name}</h3>
+          <p className='col-12'>{data.description}</p>
 
-    <div className='d-flex col-3 flex-column number2Child'>
-        <div className='m-2 bg-danger'></div>
-        <div className='m-2 bg-danger'></div>
-    </div>
+      </div>
+      <div className='   row p-2 ' style={{ height: `70%` }}>
+        <div className=' col-4  defaultHeight1Col  '>
 
-    <div className='d-flex col-3 flex-column number2Child'>
-        <div className='m-2 bg-danger'></div>
-        <div className='m-2 bg-danger'></div>
-    </div>
-   
-</div>
-  )
+          <div  id={`${data.componentDetails && data.componentDetails[0]?`CMPD${data.componentDetails[0].id}`:''}`}  className='  col-12 defaultBakground defaultHeight1Col shadow '>
+
+
+          </div>
+        </div>
+
+        <div className=' col-4  '>
+          <div  id={`${data.componentDetails && data.componentDetails[1]?`CMPD${data.componentDetails[1].id}`:''}`}   className=' defaultBakground defaultHeight2Col shadow'></div>
+          <div  id={`${data.componentDetails && data.componentDetails[2]?`CMPD${data.componentDetails[2].id}`:''}`}  className=' defaultBakground mt-1 defaultHeight2Col shadow'></div>
+        </div>
+
+        <div className=' col-4 '>
+          <div id={`${data.componentDetails && data.componentDetails[3]?`CMPD${data.componentDetails[3].id}`:''}`}  className=' defaultBakground defaultHeight2Col shadow'></div>
+          <div  id={`${data.componentDetails && data.componentDetails[4]?`CMPD${data.componentDetails[4].id}`:''}`}   className=' defaultBakground mt-1 defaultHeight2Col shadow'></div>
+        </div>
+
+      </div>
+      </div>
+    )
+ 
 }
 
 export default ContainerTypeE

@@ -1,6 +1,7 @@
 .video{
     width: 100vw;
     height: 100vh;
+    min-height: 35vh;
     object-fit: cover;
     position: relative;
     left: 0;
@@ -8,7 +9,11 @@
     top: 0;
     bottom: 0;
     overflow-y: auto;
+    overflow-x: hidden;
     
+   
+    
+
 
 }
 .video-section {
@@ -114,7 +119,7 @@ body{
     width: 20px;
     height: 20px;
     background: rgba(78, 157, 255, 0.842);
-    animation: animate 25s linear infinite;
+   
     bottom: -150px;
     
 }

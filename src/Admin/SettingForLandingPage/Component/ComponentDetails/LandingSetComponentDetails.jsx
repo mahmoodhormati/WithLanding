@@ -7,6 +7,7 @@ import { DeleteComponentDetail, SetComponentDetail } from '../../../../services/
 import { toast } from 'react-toastify';
 import { ImCross } from 'react-icons/im';
 import { AiFillPicture } from 'react-icons/ai';
+import { attachmentUpload } from '../../../../services/attachmentService';
 
 
 const customStyles = {
@@ -40,7 +41,14 @@ const LandingSetComponentDetails = ({ componentDetails, GetComponent, componentI
 
 
   const openModal = () => {
+
     setIsOpen(true);
+    setDescription()
+    setbuttonName()
+    sethasButton()
+    setTitle()
+    setbuttonLink()
+    SetFile([])
   }
   const closeModal = () => {
     setIsOpen(false);
@@ -78,13 +86,27 @@ const LandingSetComponentDetails = ({ componentDetails, GetComponent, componentI
       const { data, status } = await SetComponentDetail(body)
 
       if (status === 200) {
-        toast.success('تغییرات ثبت شد', {
-          position: "top-right",
-          closeOnClick: true,
-        })
 
-        closeModal()
-        GetComponent()
+
+        console.log(file);
+        let attachmentId = data.result.id
+        const formData = new FormData()
+        formData.append('Files', file[0][0])
+        formData.append('EntityTypeId', 25)
+        formData.append('EntityId', attachmentId)
+        formData.append('AttchmentTypeId', 0)
+
+        const response = await attachmentUpload(formData)
+        if (response.status === 200) {
+          toast.success('تغییرات ثبت شد', {
+            position: "top-right",
+            closeOnClick: true,
+          })
+
+
+          closeModal()
+          GetComponent()
+        }
       }
 
     } catch (error) {
@@ -123,7 +145,7 @@ const LandingSetComponentDetails = ({ componentDetails, GetComponent, componentI
 
   return (
     <div className=" rounded ProductSupplyCondition ">
-      {componentDetails.componentDetails.length < 1 ? (<span className="d-block text-center p-5 ">هیچ اجزایی یافت نشد</span>) : (
+      {componentDetails.componentDetails && !Array.isArray(componentDetails.componentDetails) ? (<span className="d-block text-center p-5 ">هیچ اجزایی یافت نشد</span>) : (
         <div className=" ProductSupplyCondition-table table  table-hover table-striped  p-2">
           <table
             className="  mt-2  mb-4">
@@ -139,7 +161,7 @@ const LandingSetComponentDetails = ({ componentDetails, GetComponent, componentI
               </tr>
             </thead>
             <tbody>
-              {componentDetails.componentDetails.length > 0 ? componentDetails.componentDetails.map((i, index) => (
+              {componentDetails.componentDetails && Array.isArray(componentDetails.componentDetails) ? componentDetails.componentDetails.map((i, index) => (
 
 
                 <tr key={i.id}>

@@ -52,11 +52,11 @@ const TakhsisTableForClients = ({ columns, data, getData, bulkJob, rowProps = ()
           })`)
 
               script.appendChild(scriptText);
-              document.head.appendChild(script);
+              document.body.appendChild(script);
 
 
           return(
-                ()=>document.head.removeChild(script)
+                ()=>document.body.removeChild(script)
               )
     },[data])
     

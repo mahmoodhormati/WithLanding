@@ -93,6 +93,8 @@ const NewSunburstChart = () => {
         }
 
     }
+
+    console.log(color());
     useEffect(() => {
         Sunburst().data([])
         if (orderSunburst) {
