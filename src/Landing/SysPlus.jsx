@@ -132,7 +132,7 @@ const SysPlus = () => {
     }
 }
 
-setTimeout(GetComponentImages(), 5000)
+setTimeout(()=>{GetComponentImages()}, 5000)
 
 `)
 
