@@ -73,10 +73,10 @@ const MyTableClick = ({ showAddress, columns, data, getData, bulkJob, formatRowP
           })`)
 
         script.appendChild(scriptText);
-        document.head.appendChild(script);
+        document.body.appendChild(script);
 
         return (
-            () => document.head.removeChild(script)
+            () => document.body.removeChild(script)
         )
 
     }, [data])

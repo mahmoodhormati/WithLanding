@@ -1,30 +1,61 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-const ContainerTypeF = ({height}) => {
-    return (
-        <div className='d-flex flex-row justify-content-around ChildContainer' style={{height:`${height}`}}>
-            <div className='d-flex col-3 flex-column number2Child'>
+const ContainerTypeF = ({ height, data }) => {
 
-                <div className='bg-info'>
+    const [loading, setLoading] = useState(true)
 
-                </div>
+
+        return (
+            <div id={`CMP${data.id}`}  className='  rounded mt-4 mb-4' style={{ height: `${height}vh` ,minHeight:'45vh'}}>
+            <div className='row col-12'>
+                <h3 className='col-12'>{data.name}</h3>
+                <p className='col-12'>{data.description}</p>
+      
             </div>
+            <div className=' row p-2 ' style={{ height: `70%` }}>
+                <div className=' col-4  defaultHeight1Col '>
+                    <div  id={`${data.componentDetails && data.componentDetails[0]?`CMPD${data.componentDetails[0].id}`:''}`}   className=' col-12 defaultBakground defaultHeight1Col shadow'>
 
-            <div className='d-flex col-7 flex-column number2Child'>
 
-                <div className='bg-primary mb-1'>
-                    <div className=' '></div>
+                    </div>
+
                 </div>
-                <div className='d-flex flex-row justify-content-around childOfChildFive'>
 
-                    <div className='col-3 bg-danger m-1'></div>
-                    <div className='col-3 bg-danger m-1'></div>
-                    <div className='col-3 bg-danger m-1'></div>
+                <div className='col-8 ml-1  row '>
+
+                    <div id={`${data.componentDetails && data.componentDetails[1]?`CMPD${data.componentDetails[1].id}`:''}`}  className='col-12 defaultBakground  defaultHeight2Col shadow'>
+
+
+                    </div>
+
+
+                    <div className='col-4   defaultHeight2Col mt-1'>
+                        <div id={`${data.componentDetails && data.componentDetails[2]?`CMPD${data.componentDetails[2].id}`:''}`}  className='col-12  defaultBakground defaultHeight1Col shadow'>
+
+                        </div>
+                    </div>
+
+                    <div className='col-4   defaultHeight2Col mt-1'>
+                        <div  id={`${data.componentDetails && data.componentDetails[3]?`CMPD${data.componentDetails[3].id}`:''}`}   className='col-12 defaultBakground  defaultHeight1Col shadow'>
+
+                        </div>
+                    </div>
+                    <div className='col-4   defaultHeight2Col mt-1'>
+                        <div id={`${data.componentDetails && data.componentDetails[4]?`CMPD${data.componentDetails[4].id}`:''}`}   className='col-12 defaultBakground  defaultHeight1Col shadow'>
+
+                        </div>
+                    </div>
+
+
+
+
+
                 </div>
+
             </div>
-
-        </div>
-    )
+            </div>
+        )
+   
 }
 
 export default ContainerTypeF

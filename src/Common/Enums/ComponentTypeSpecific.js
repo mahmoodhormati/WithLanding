@@ -8,12 +8,12 @@ export const ComponentTypeSpecific=[
     {id:200,name:'ContainerTypeA',parent:2},
     {id:201,name:'ContainerTypeB',parent:2},
     {id:202,name:'ContainerTypeC',parent:2},
-    {id:203,name:'ContainerTypeD',parent:2},
+   
     {id:204,name:'ContainerTypeE',parent:2},
     {id:205,name:'ContainerTypeF',parent:2},
     {id:206,name:'ContainerTypeG',parent:2},
     {id:207,name:'ContainerTypeH',parent:2},
-    // {id:208,name:'ContainerTypeI'},
+    {id:208,name:'ContainerTypeI',parent:2},
     // {id:209,name:'ContainerTypeJ'},
     // {id:210,name:'ContainerTypeK'},
 

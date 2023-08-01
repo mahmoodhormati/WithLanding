@@ -1,13 +1,7 @@
-.hover-effect1 {
-    min-height: 20px;
-    background: #F44336;
-    text-align: center;
-  }
-  .hover-effect1 ul {
-   padding-top: 1px;
-  }
+
   .hover-effect1 ul li {
    display: inline-block;
+   z-index: 2000;
   }
   .hover-effect1 ul li a {
    font-size: 30px;
@@ -36,10 +30,10 @@
   }
 
 .page-footer p {
-    color: #fff;
+    color: #888ea8;
 }
 .page-footer a {
-    color: #fff;
+    color: #888ea8;
 }
   .page-footer h6{
     color: #5383d3;

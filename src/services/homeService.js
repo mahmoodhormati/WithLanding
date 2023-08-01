@@ -1,4 +1,4 @@
-import http from './httpService';
+import http from './httpServiceWithoutToken';
 let configure=window.globalThis.site_url;
 
 

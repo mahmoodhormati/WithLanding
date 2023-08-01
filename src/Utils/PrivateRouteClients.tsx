@@ -10,6 +10,8 @@ const PrivateRouteClients : React.FC<Props>= ({children}:Props) => {
     const token = localStorage.getItem("token")
     const location = useLocation()
     
+   
+    
     return token    ?
     children 
  : 
