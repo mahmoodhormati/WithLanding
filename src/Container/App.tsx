@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter, Route, Router, Routes,Navigate, HashRouter } from 'react-router-dom';
+import { BrowserRouter, Route, Router, Routes, Navigate, HashRouter } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import AdminPannel from './AdminPannel';
 import Login from '../Common/Shared/Login/Login';
@@ -18,27 +18,25 @@ import { ProSidebarProvider } from 'react-pro-sidebar';
 
 
 
-const App:React.FC=()=>{
- 
- 
+const App: React.FC = () => {
 
 
-  const [currentUser, setCurrentUser] = useState({}); 
+  const [currentUser, setCurrentUser] = useState({});
 
   return (
     <BrowserRouter>
-    <ProSidebarProvider >
-      <AdminPannel />
-      <ToastContainer position="top-right"
-        autoClose={10000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={true}
-        pauseOnFocusLoss={false}
-        draggable
-         />
-        </ProSidebarProvider>
+      <ProSidebarProvider >
+        <AdminPannel />
+        <ToastContainer position="top-right"
+          autoClose={10000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={true}
+          pauseOnFocusLoss={false}
+          draggable
+        />
+      </ProSidebarProvider>
     </BrowserRouter>
   )
 }

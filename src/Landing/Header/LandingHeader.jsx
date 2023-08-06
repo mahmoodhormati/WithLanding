@@ -13,6 +13,7 @@ import './style.css'
 import { index } from 'd3';
 import { ClipLoader } from 'react-spinners';
 import { BsBasket } from 'react-icons/bs';
+import { useScrollDirection } from './CustomeHookForScrool';
 
 
 const attachmetURL = (window).globalThis.stie_att
@@ -33,7 +34,7 @@ const LandingHeader = () => {
     const [loading, setLoading] = useState(false);
     const token = localStorage.getItem('token');
     const [attachments, Setattachments] = useState([]);
-
+    const scrollDir = useScrollDirection()
     const handelGetAttachment = async () => {
 
         if (token) {
@@ -114,7 +115,6 @@ const LandingHeader = () => {
 
 
 
-
     useEffect(() => {
         // getCartShopping()
         handelGetAttachment()
@@ -131,7 +131,7 @@ const LandingHeader = () => {
     return (
 
 
-        <div className=" header-fixed">
+        <div id="headerLanding" className={`${ scrollDir === "down" ? "hide" : "show"}`}>
 
             <header className="header navbar navbar-expand-sm" style={{ minHeight: '110px' }}>
 
@@ -447,7 +447,7 @@ const LandingHeader = () => {
                     </li>
 
                     <li className="nav-item dropdown user-profile-dropdown  order-lg-0 order-1">
-                       {token? <Link to='#' className="nav-link dropdown-toggle user" id="userProfileDropdown" data-toggle="dropdown"
+                        {token ? <Link to='#' className="nav-link dropdown-toggle user" id="userProfileDropdown" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">
                             {newAttachment.length > 0 ? <img src={`${attachmetURL}${newAttachment[0].path}`} className="rounded-circle " alt={`${user.firstName} ${user.lastName}`} /> :
                                 <svg style={{ marginLeft: '8px', border: '2px solid white', borderRadius: '5px' }} xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
@@ -455,8 +455,8 @@ const LandingHeader = () => {
                                     <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
                                     <path fillRule="evenodd"
                                         d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
-                                </svg>}                       </Link>:<Link to='/login' className="nav-link dropdown-toggle user" id="userProfileDropdown" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
+                                </svg>}                       </Link> : <Link to='/login' className="nav-link dropdown-toggle user" id="userProfileDropdown" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
                             {newAttachment.length > 0 ? <img src={`${attachmetURL}${newAttachment[0].path}`} className="rounded-circle " alt={`${user.firstName} ${user.lastName}`} /> :
                                 <svg style={{ marginLeft: '8px', border: '2px solid white', borderRadius: '5px' }} xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
                                     className="bi bi-person-circle" viewBox="0 0 16 16">
