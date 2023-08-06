@@ -86,6 +86,7 @@ height: 100%;
     opacity: 1;
     transition-duration: 1s cubic-bezier(0,0,1,1);
     transform:scale(1) ;
+    width: 100vw;
 }
 
 .slider_control-LeftBanner {

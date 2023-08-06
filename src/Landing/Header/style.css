@@ -1,0 +1,17 @@
+#headerLanding {
+    position: fixed;
+    /* display: none; */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1030;
+    transition: all .3s ease;
+}
+
+
+#headerLanding.hide{
+
+
+
+    top:-110px;
+}

@@ -16,7 +16,7 @@ const FullSizeBanner = ({slides,time,height,data})=> {
   const [current, SetCurrent] = useState(0)
   const length = data.componentDetails.length
   const [sliderReady, setSliderReady] = useState(true)
-  const IMAGE_PARTS = 3;
+  const IMAGE_PARTS = 4;
   let changeTO = null;
   const AUTOCHANGE_TIME = 1;
  
@@ -99,7 +99,7 @@ const prevSlide = () => {
   }, [])
   
   return (
-    <div className={`${images.length>0? `ltr slider m-1 radiusss ${classNames( { 's--ready': sliderReady })}`:`ltr sliderWithoutimage slider m-1 radiusss ${classNames( { 's--ready': sliderReady })}`}`} style={{height:`${height}vh` ,minHeight:'50vh'} }>
+    <div className={`${images.length>0? ` slider m-1 radiusss ${classNames( { 's--ready': sliderReady })}`:` sliderWithoutimage slider m-1 radiusss ${classNames( { 's--ready': sliderReady })}`}`} style={{height:`${height}vh` ,minHeight:'50vh'} }>
   
       <div className="slider__slides">
         {data.componentDetails.map((slide, index) => (

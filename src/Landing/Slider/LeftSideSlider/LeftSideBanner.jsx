@@ -4,14 +4,14 @@ import { Link } from 'react-router-dom';
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa'
 import './LeftSlider.css'
 import { GetAttachmentsWithoutoken } from '../../../services/attachmentService';
-import  QueryString  from 'qs';
+import QueryString from 'qs';
 
-const attachmetURL = (window ).globalThis.stie_att;
+const attachmetURL = (window).globalThis.stie_att;
 
 const LeftSideBanner = ({ slides, time, height, data }) => {
     const [current, SetCurrent] = useState(0)
     const autoPlayRef = useRef()
-    const[images,SetImages]=useState([])
+    const [images, SetImages] = useState([])
     const length = data.componentDetails.length
 
     const nextSlide = () => {
@@ -20,45 +20,45 @@ const LeftSideBanner = ({ slides, time, height, data }) => {
     const prevSlide = () => {
         SetCurrent(current === 0 ? length - 1 : current - 1)
     }
-    const entities=[...new Set(data.componentDetails.map((item) => item.id))]
-    const GetSlideAttachments=async()=>{
+    const entities = [...new Set(data.componentDetails.map((item) => item.id))]
+    const GetSlideAttachments = async () => {
 
-        let localImage=[]
-        
-            
-       
+        let localImage = []
+
+
+
         try {
-          for (let i = 0; i < entities.length; i++) {
-            let configs = {
-              headers: { "Content-Type": "application/json" },
-              params: {
-    
-                EntityTypeId:25,
-                EntityId:entities[i]
-               
-    
-    
-              },
-              paramsSerializer: (params) => {
-                return QueryString.stringify(params);
-              },
-            };
-    
-    const {data,status}=await GetAttachmentsWithoutoken(configs)
-    
-    localImage.push(data.result.globalAttachments.map(x=>({...x,id:entities[i]}))[0]);
-            
-          }
-    
-          SetImages(localImage)
-          
+            for (let i = 0; i < entities.length; i++) {
+                let configs = {
+                    headers: { "Content-Type": "application/json" },
+                    params: {
+
+                        EntityTypeId: 25,
+                        EntityId: entities[i]
+
+
+
+                    },
+                    paramsSerializer: (params) => {
+                        return QueryString.stringify(params);
+                    },
+                };
+
+                const { data, status } = await GetAttachmentsWithoutoken(configs)
+
+                localImage.push(data.result.globalAttachments.map(x => ({ ...x, id: entities[i] }))[0]);
+
+            }
+
+            SetImages(localImage)
+
         } catch (error) {
-          
+
         }
-    
-    
-      }
-      
+
+
+    }
+
 
     useEffect(() => {
 
@@ -70,7 +70,7 @@ const LeftSideBanner = ({ slides, time, height, data }) => {
 
         setTimeout(() => {
             GetSlideAttachments()
-          }, 5000);
+        }, 5000);
         const play = () => {
             autoPlayRef.current()
         }
@@ -113,8 +113,27 @@ const LeftSideBanner = ({ slides, time, height, data }) => {
 
 
     return (
-        <div className='  m-1 radiusss' style={{ height: `${height}vh` ,minHeight:'45vh'}} >
+        <div className='   radiusss' style={{ height: `${height}vh`, minHeight: '45vh' }} >
             <div className='sliderLeft ' >
+
+                <div className='afterSlider text-center d-flex flex-column justify-content-around col-6'>
+
+
+
+                    <div >
+                        <h3>تست</h3>
+                    </div>
+
+                    <p className='text-center mt-1 mb-3'>
+                        تست
+                    </p>
+                    <div>
+                        <button className='btn btn-success'><Link to='#'>لینک</Link></button>
+                    </div>
+
+
+
+                </div>
 
                 {data.componentDetails.map((item, index) => {
 
@@ -125,29 +144,12 @@ const LeftSideBanner = ({ slides, time, height, data }) => {
                             {index === current && (
 
 
-                                <div className='row' style={{height:'100%'}}>
-                                    <div className='afterSlider text-center d-flex flex-column justify-content-around'>
+                                <div className='row' style={{ height: '100%' }}>
 
 
-
-                                        <div >
-                                            <h3>{item.title}</h3>
-                                        </div>
-
-                                        <p className='text-center mt-1 mb-3'>
-                                           {item.description}
-                                        </p>
-                                        <div>
-                                            <button className='btn btn-success'><Link to='#'>لینک</Link></button>
-                                        </div>
+                                    <div className={images.length > 0 ? 'sliderLeftContainer ' : 'sliderLeftContainer sliderLeftContainerWithoutImage'} style={{ backgroundImage: `${images.length > 0 ? `url(${attachmetURL}${images.filter(b => b.id === item.id).map(x => x.path)[0]})` : ''}`, backgroundRepeat: 'no-repeat', backgroundSize: '100% 100%', }} >
 
 
-
-                                    </div>
-
-                                    <div className={images.length>0?'sliderLeftContainer ':'sliderLeftContainer sliderLeftContainerWithoutImage'} style={{ backgroundImage: `${images.length>0?`url(${attachmetURL}${images.filter(b=>b.id===item.id).map(x=>x.path)[0]})`:''}`,backgroundRepeat:'no-repeat',backgroundSize:'100% 100%', }} >
-
-                                
                                     </div>
 
                                 </div>)}
